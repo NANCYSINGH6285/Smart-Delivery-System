@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Delivery Optimization System</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">🚚 Smart Delivery</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#algorithms">Algorithms</a></li>
+        <li><a href="#code">Code</a></li>
+        <li><a href="#performance">Performance</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="menu-toggle">&#9776;</div>
+    </nav>
+  </header>
+
+  <!-- ===== HOME ===== -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Smart Delivery Optimization System</h1>
+      <p>Optimizing logistics using Sorting, Graph, Greedy, Dynamic Programming, and Divide & Conquer Algorithms.</p>
+      <a href="#about" class="btn">Explore Project</a>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="about">
+    <h2>About The Project</h2>
+    <p>
+      This project designs and implements a smart logistics optimization system
+      for a delivery company to minimize cost, optimize routes, and allocate
+      resources efficiently. It integrates key algorithmic paradigms for real-world performance.
+    </p>
+    <div class="grid-info">
+      <div><strong>Goal:</strong> Minimize cost and maximize throughput</div>
+      <div><strong>Languages:</strong> Python / C++ / Java</div>
+      <div><strong>Techniques:</strong> Sorting, Graphs, DP, Greedy, D&C</div>
+    </div>
+  </section>
+
+  <!-- ===== ALGORITHMS ===== -->
+  <section id="algorithms" class="algorithms">
+    <h2>Algorithms Used</h2>
+
+    <div class="algo-card">
+      <h3>📦 Sorting Algorithms</h3>
+      <p>Used for prioritizing delivery requests using Merge Sort, Quick Sort, and Heap Sort. Efficient sorting improves fairness and scheduling.</p>
+    </div>
+
+    <div class="algo-card">
+      <h3>🗺️ Graph Algorithms</h3>
+      <p>Model cities as weighted graphs. Use Dijkstra and Bellman-Ford for route optimization and MST for network efficiency.</p>
+    </div>
+
+    <div class="algo-card">
+      <h3>🚛 Greedy Algorithms</h3>
+      <p>Assign packages to vehicles with capacity constraints using activity selection and fractional knapsack.</p>
+    </div>
+
+    <div class="algo-card">
+      <h3>🧮 Dynamic Programming</h3>
+      <p>Used for optimal cost minimization through 0/1 Knapsack, Floyd-Warshall, and multi-stage delivery planning.</p>
+    </div>
+
+    <div class="algo-card">
+      <h3>⚙️ Divide & Conquer</h3>
+      <p>Handles large-scale optimization: parallel merge sort and network zone division, analyzed using the Master Theorem.</p>
+    </div>
+  </section>
+
+  <!-- ===== CODE IMPLEMENTATION ===== -->
+  <section id="code" class="code">
+    <h2>Code Implementation (Example)</h2>
+    <pre>
+# Example: Dijkstra's Algorithm (Python)
+import heapq
+def dijkstra(graph, start):
+    dist = {node: float('inf') for node in graph}
+    dist[start] = 0
+    pq = [(0, start)]
+    while pq:
+        d, u = heapq.heappop(pq)
+        if d > dist[u]:
+            continue
+        for v, w in graph[u]:
+            if dist[v] > d + w:
+                dist[v] = d + w
+                heapq.heappush(pq, (dist[v], v))
+    return dist
+    </pre>
+  </section>
+
+  <!-- ===== PERFORMANCE ===== -->
+  <section id="performance" class="performance">
+    <h2>Performance Graphs</h2>
+    <div class="chart">
+      <img src="[upload.wikimedia.org](https://upload.wikimedia.org/wikipedia/commons/0/0e/Sorting_algorithms_comparison.svg)" alt="Performance Graph Example">
+      <p>Sample performance curve comparing algorithms by time complexity and scalability.</p>
+    </div>
+  </section>
+
+  <!-- ===== CONCLUSION ===== -->
+  <section id="conclusion" class="conclusion">
+    <h2>Conclusion</h2>
+    <p>
+      The Smart Delivery Optimization System integrates multiple algorithmic paradigms
+      to deliver a scalable, efficient, and intelligent logistics framework. It
+      demonstrates the synergy between theory and real-world application.
+    </p>
+  </section>
+
+  <!-- ===== CONTACT/FOOTER ===== -->
+  <footer id="contact">
+    <h3>Contact</h3>
+    <p>Email: <a href="mailto:project.team@college.edu">project.team@college.edu</a></p>
+    <p>© 2026 Smart Delivery Optimization Project | All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
